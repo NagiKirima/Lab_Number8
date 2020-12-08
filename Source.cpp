@@ -8,7 +8,7 @@ int GetCorrectNumber() // checking input numbers
 	{
 		cin.clear();
 		while (cin.get() != '\n');
-		cout << "Enter the correct number\t";
+		cout << "Enter the correct number:\t";
 	}
 	return size;
 }
@@ -24,7 +24,7 @@ int main()
 {
 	setlocale(LC_ALL, "rus");
 	int n, m;
-	cout << "Enter the number of numbers in the sequence : \t";
+	cout << "Enter the number of numbers in the sequence: \t";
 	n = GetCorrectNumber();
 	cout << "Enter the sequence number:\t";
 	m = GetCorrectNumber();
