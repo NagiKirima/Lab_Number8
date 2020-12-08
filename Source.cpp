@@ -1,19 +1,19 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-int GetCorrectNumber() // проверка чисел, вводимых пользователем на натуральность
+int GetCorrectNumber() // checking input numbers
 {
 	int size;
 	while (!(cin >> size) || (cin.peek() != '\n') || size < 1)
 	{
 		cin.clear();
 		while (cin.get() != '\n');
-		cout << "¬ведите корректное число:\t";
+		cout << "Enter the correct number\t";
 	}
 	return size;
 }
 
-unsigned long long int recur(int n, int m) // возведение предыдущего вызова в степень m r(n-1)^m
+unsigned long long int recur(int n, int m) // recur(n-1)^m
 {
 	if (n == 1) return m;
 	unsigned long long int res = pow(recur(n - 1, m), m);
@@ -24,9 +24,9 @@ int main()
 {
 	setlocale(LC_ALL, "rus");
 	int n, m;
-	cout << "¬ведите количество чисел в последовательности:\t";
+	cout << "Enter the number of numbers in the sequence : \t";
 	n = GetCorrectNumber();
-	cout << "¬ведите число последовательности:\t";
+	cout << "Enter the sequence number:\t";
 	m = GetCorrectNumber();
 	cout << recur(n, m);
 }
